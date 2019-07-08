@@ -36,6 +36,7 @@ BASE_PATH = os.path.dirname(__file__)
 
 test_parse_models = [
     ["ios", "config", napalm_yang.models.openconfig_interfaces, "default"],
+    ["ios", "config", napalm_yang.models.openconfig_system, "default"],
     ["eos", "config", napalm_yang.models.openconfig_network_instance, "default"],
     ["eos", "config", napalm_yang.models.openconfig_interfaces, "default"],
     ["eos", "config", napalm_yang.models.openconfig_interfaces, "l2_ports"],
@@ -44,6 +45,8 @@ test_parse_models = [
     ["eos", "state", napalm_yang.models.openconfig_interfaces, "default"],
     ["junos", "config", napalm_yang.models.openconfig_interfaces, "default"],
     ["junos", "config", napalm_yang.models.openconfig_network_instance, "default"],
+    ["junos", "config", napalm_yang.models.openconfig_network_instance, "ospf"],
+    ["junos", "config", napalm_yang.models.openconfig_network_instance, "mpls"],
     ["junos", "config", napalm_yang.models.openconfig_system, "default"],
     ["junos", "state", napalm_yang.models.openconfig_interfaces, "default"],
     ["nxos", "config", napalm_yang.models.openconfig_interfaces, "default"],

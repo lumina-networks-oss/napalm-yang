@@ -36,15 +36,18 @@ interfaces:
                       map:
                           ge: ethernetCsmacd
                           xe: ethernetCsmacd
+                          em: ethernetCsmacd
                           et: ethernetCsmacd
                           irb: ethernetCsmacd
                           me: ethernetCsmacd
+                          vme: ethernetCsmacd
                           vlan: ethernetCsmacd
                           lo: softwareLoopback
                           ae: ieee8023adLag
                           fxp: ethernetCsmacd
                           lt: tunnel
                           st: tunnel
+                          gr: tunnel
             enabled:
                 _process:
                     - path: "disable"
