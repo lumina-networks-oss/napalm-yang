@@ -5,4 +5,5 @@ SUPPORTED_MODELS = (
     ("openconfig-platform", ["components"]),
     ("openconfig-vlan", ["vlans"]),
     ("openconfig-system", ["system"]),
+    ("openconfig-local-routing", ["local_routing"]),
 )

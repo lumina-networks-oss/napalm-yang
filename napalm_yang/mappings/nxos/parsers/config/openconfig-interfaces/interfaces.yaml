@@ -22,7 +22,8 @@ interfaces:
                     - path: "shutdown"
                       present: no
             mtu:
-                _process: not_implemented
+                _process:
+                    - path: mtu
             name:
                 _process: unnecessary
             type:
