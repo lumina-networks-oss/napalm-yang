@@ -20,7 +20,7 @@
                         "0": {
                             "config": {
                                 "enabled": true,
-                                "name": "0"
+                                "index": "0"
                             },
                             "index": "0",
                             "ipv4": {
@@ -63,7 +63,7 @@
                             "config": {
                                 "description": "R1@ge-0/0/0.0->R2-ge-0/0/0.0",
                                 "enabled": true,
-                                "name": "0"
+                                "index": "0"
                             },
                             "index": "0",
                             "ipv4": {
@@ -106,7 +106,7 @@
                             "config": {
                                 "description": "R1@ge-0/0/1.0->R3@ge-0/0/0.0",
                                 "enabled": true,
-                                "name": "0"
+                                "index": "0"
                             },
                             "index": "0",
                             "ipv4": {
@@ -149,7 +149,7 @@
                             "config": {
                                 "description": "R1@ge-0/0/2.0->R5@ge-0/0/0.0",
                                 "enabled": true,
-                                "name": "0"
+                                "index": "0"
                             },
                             "index": "0",
                             "ipv4": {
@@ -191,7 +191,7 @@
                         "0": {
                             "config": {
                                 "enabled": true,
-                                "name": "0"
+                                "index": "0"
                             },
                             "index": "0",
                             "ipv4": {
@@ -214,7 +214,7 @@
                         "6": {
                             "config": {
                                 "enabled": true,
-                                "name": "6"
+                                "index": "6"
                             },
                             "index": "6",
                             "ipv4": {
@@ -268,7 +268,7 @@
                         "0": {
                             "config": {
                                 "enabled": true,
-                                "name": "0"
+                                "index": "0"
                             },
                             "index": "0",
                             "ipv4": {
@@ -291,7 +291,7 @@
                         "4225": {
                             "config": {
                                 "enabled": true,
-                                "name": "4225"
+                                "index": "4225"
                             },
                             "index": "4225",
                             "ipv4": {

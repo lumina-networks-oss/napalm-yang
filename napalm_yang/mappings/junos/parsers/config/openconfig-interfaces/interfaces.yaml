@@ -69,10 +69,10 @@ interfaces:
                 config:
                     _process: unnecessary
                     index:
-                        _process: not_implemented
-                    name:
                         _process:
                             - pre: "{{ subinterface_key }}"
+                    name:
+                        _process: unnecessary
                     enabled:
                         _process:
                             - path: "disable"
