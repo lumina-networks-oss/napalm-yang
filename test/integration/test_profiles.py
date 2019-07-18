@@ -40,6 +40,7 @@ test_parse_models = [
     ["eos", "config", napalm_yang.models.openconfig_network_instance, "default"],
     ["eos", "config", napalm_yang.models.openconfig_interfaces, "default"],
     ["eos", "config", napalm_yang.models.openconfig_interfaces, "l2_ports"],
+    ["eos", "config", napalm_yang.models.openconfig_local_routing, "default"],  
     ["eos", "config", napalm_yang.models.openconfig_vlan, "default"],
     ["eos", "config", napalm_yang.models.openconfig_system, "default"],
     ["eos", "state", napalm_yang.models.openconfig_interfaces, "default"],

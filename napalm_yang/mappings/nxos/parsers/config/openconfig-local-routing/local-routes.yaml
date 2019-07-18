@@ -1,0 +1,75 @@
+---
+metadata:
+    processor: TextTree
+    execute:
+        - method: cli
+          kwargs:
+              commands: ["show running-config all"]
+
+local-routes:
+    _process: unnecessary
+    local-aggregates:
+        _process: not_implemented
+        aggregate:
+            _process: not_implemented
+            config:
+                _process: not_implemented
+                discard:
+                    _process: not_implemented
+                prefix:
+                    _process: not_implemented
+                set-tag:
+                    _process: not_implemented
+            prefix:
+                _process: not_implemented
+            state:
+                _process: not_implemented
+    static-routes:
+        _process: unnecessary
+        static:
+            _process:
+                - path: "ip.route"
+                  regexp: "(?P<value>^\\d+\\.\\d+\\.\\d+\\.\\d+\\/\\d+)"
+                  from: root_local-routes.0
+            config:
+                _process: unnecessary
+                prefix:
+                    _process:
+                        - pre: "{{ static_key }}"
+                set-tag:
+                    _process: not_implemented
+            next-hops:
+                _process: unnecessary
+                next-hop:
+                    _process:
+                        - path: ""
+                    config:
+                        _process: unnecessary
+                        index:
+                            _process: not_implemented
+                        metric:
+                            _process:
+                                - regexp: "(?P<value>\\d+)"
+                        next-hop:
+                            _process:
+                                - pre: "{{ next_hop_key }}"
+                        recurse:
+                            _process: not_implemented
+                    index:
+                        _process: not_implemented
+                    interface-ref:
+                        _process: not_implemented
+                        config:
+                            _process: not_implemented
+                            interface:
+                                _process: not_implemented
+                            subinterface:
+                                _process: not_implemented
+                        state:
+                            _process: not_implemented
+                    state:
+                        _process: not_implemented
+            prefix:
+                _process: not_implemented
+            state:
+                _process: not_implemented
