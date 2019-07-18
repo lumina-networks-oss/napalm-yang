@@ -35,7 +35,9 @@ interfaces:
                     - value: "    description {{ model }}\n"
                       negate: "    no description"
             mtu:
-                _process: not_implemented
+                _process:
+                    - value: "    mtu {{ model }}\n"
+                      negate: "    default mtu\n"
         subinterfaces:
             _process: unnecessary
             subinterface:
