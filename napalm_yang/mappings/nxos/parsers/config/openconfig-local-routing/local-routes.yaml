@@ -4,7 +4,7 @@ metadata:
     execute:
         - method: cli
           kwargs:
-              commands: ["show running-config"]
+              commands: ["show running-config all"]
 
 local-routes:
     _process: unnecessary
