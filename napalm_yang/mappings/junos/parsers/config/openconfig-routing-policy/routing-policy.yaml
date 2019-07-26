@@ -1,0 +1,160 @@
+---
+metadata:
+    processor: XMLParser
+    execute:
+        - method: _rpc
+          kwargs:
+              get: "<get-configuration/>"
+
+routing-policy:
+    _process:
+        - path: "configuration.policy-options"
+          from: root_routing-policy.0
+    defined-sets:
+        _process: unnecessary
+        neighbor-sets:
+            _process: not_implemented
+            neighbor-set:
+                _process: not_implemented
+                config:
+                    _process: not_implemented
+                    address:
+                        _process: not_implemented
+                    name:
+                        _process: not_implemented
+                name:
+                    _process: not_implemented
+                state:
+                    _process: not_implemented
+        prefix-sets:
+            _process: unnecessary
+            prefix-set:
+                _process:
+                    - path: "prefix-list"
+                      key: name
+                config:
+                    _process: unnecessary
+                    mode:
+                        _process: not_implemented
+                    name:
+                        _process:
+                            - pre: "{{ prefix_set_key }}"
+                name:
+                    _process: unnecessary
+                prefixes:
+                    _process: unnecessary
+                    prefix:
+                        _process:
+                            - path: "prefix-list-item"
+                              key: name
+                        config:
+                            _process: unnecessary
+                            ip-prefix:
+                                _process:
+                                    - pre: "{{ prefix_key }}"
+                            masklength-range:
+                                _process: not_implemented
+                        ip-prefix:
+                            _process: unnecessary
+                        masklength-range:
+                            _process: not_implemented
+                        state:
+                            _process: not_implemented
+                state:
+                    _process: not_implemented
+        tag-sets:
+            _process: not_implemented
+            tag-set:
+                _process: not_implemented
+                config:
+                    _process: not_implemented
+                    name:
+                        _process: not_implemented
+                    tag-value:
+                        _process: not_implemented
+                name:
+                    _process: not_implemented
+                state:
+                    _process: not_implemented
+    policy-definitions:
+        _process: not_implemented
+        policy-definition:
+            _process: not_implemented
+            config:
+                _process: not_implemented
+                name:
+                    _process: not_implemented
+            name:
+                _process: not_implemented
+            state:
+                _process: not_implemented
+            statements:
+                _process: not_implemented
+                statement:
+                    _process: not_implemented
+                    actions:
+                        _process: not_implemented
+                        config:
+                            _process: not_implemented
+                            policy-result:
+                                _process: not_implemented
+                        state:
+                            _process: not_implemented
+                    conditions:
+                        _process: not_implemented
+                        config:
+                            _process: not_implemented
+                            call-policy:
+                                _process: not_implemented
+                            install-protocol-eq:
+                                _process: not_implemented
+                        match-interface:
+                            _process: not_implemented
+                            config:
+                                _process: not_implemented
+                                interface:
+                                    _process: not_implemented
+                                subinterface:
+                                    _process: not_implemented
+                            state:
+                                _process: not_implemented
+                        match-neighbor-set:
+                            _process: not_implemented
+                            config:
+                                _process: not_implemented
+                                match-set-options:
+                                    _process: not_implemented
+                                neighbor-set:
+                                    _process: not_implemented
+                            state:
+                                _process: not_implemented
+                        match-prefix-set:
+                            _process: not_implemented
+                            config:
+                                _process: not_implemented
+                                match-set-options:
+                                    _process: not_implemented
+                                prefix-set:
+                                    _process: not_implemented
+                            state:
+                                _process: not_implemented
+                        match-tag-set:
+                            _process: not_implemented
+                            config:
+                                _process: not_implemented
+                                match-set-options:
+                                    _process: not_implemented
+                                tag-set:
+                                    _process: not_implemented
+                            state:
+                                _process: not_implemented
+                        state:
+                            _process: not_implemented
+                    config:
+                        _process: not_implemented
+                        name:
+                            _process: not_implemented
+                    name:
+                        _process: not_implemented
+                    state:
+                        _process: not_implemented
