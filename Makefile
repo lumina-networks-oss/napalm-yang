@@ -31,6 +31,17 @@ models_openconfig:
 		$(YANG_OC)/vlan/*.yang \
 		$(YANG_OC)/system/*.yang \
 		$(YANG_NAPALM)/interfaces/*.yang
+		
+models_openconfig_binding:
+	$(PYANGBIND) \
+	    --use-xpathhelper \
+		--path $(YANG_OC) \
+		-o napalm_yang/binding.py \
+		$(YANG_OC)/platform/*.yang \
+		$(YANG_OC)/interfaces/*.yang \
+		$(YANG_OC)/vlan/*.yang \
+		$(YANG_OC)/local-routing/*.yang \
+		$(YANG_OC)/policy/*.yang
 
 # .PHONY: models_ietf
 # models_ietf:
