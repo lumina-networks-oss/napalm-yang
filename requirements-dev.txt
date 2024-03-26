@@ -5,5 +5,5 @@ pytest-html
 pytest-json
 pytest-pythonpath
 tox
-black==18.4a1; python_version >= '3.6'
+black==24.3.0; python_version >= '3.6'
 -r requirements.txt
